@@ -1,0 +1,4 @@
+name = "AKNS"
+uuid = "75efc99c-f354-4bf0-9c4f-447e54034ed9"
+authors = ["Tom Trogdon <trogdon@uw.edu>"]
+version = "0.1.0"
