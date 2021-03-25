@@ -1,4 +1,4 @@
-using ApproxFunRational, AKNS, SpecialFunctions, ApproxFun
+using ApproxFunRational, AKNS, SpecialFunctions, ApproxFun, AbstractIterativeSolvers
 using Test
 
 ##
@@ -64,7 +64,10 @@ end
     end
 
     tol = 2e-12
-    simp(f) = chop(combine!(chop(f,tol/10000)),tol/10000)
+    simp(f) = chop(combine!(chop(f,tol/1000000)),tol/1000000)
     out = GMRES(Sop,J1,⋅,tol,14,x -> simp(x))
     sol = +([out[2][i]*out[1][i] for i=1:length(out[2])]...)
+    u = -(sum(sol)/pi)[2]
+    println(abs(u - q(x)))
+    @test abs(u - q(x)) < 1e-12
 end
