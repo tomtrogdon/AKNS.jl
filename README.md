@@ -4,4 +4,4 @@ Scattering and inverse scattering for the AKNS system.  The associated article i
 [https://arxiv.org/abs/2103.09953](https://arxiv.org/abs/2103.09953)
 
 [![Build Status](https://github.com/tomtrogdon/AKNS.jl/workflows/CI/badge.svg)](https://github.com/tomtrogdon/AKNS.jl/actions)
-[![Codecov](https://codecov.io/gh/tomtrogdon/AKNS.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/tomtrogdon/AKNS.jl)
+[![codecov](https://codecov.io/gh/tomtrogdon/AKNS.jl/branch/main/graph/badge.svg?token=37AQHMISX5)](https://codecov.io/gh/tomtrogdon/AKNS.jl)
