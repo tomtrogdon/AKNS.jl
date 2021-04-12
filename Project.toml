@@ -10,22 +10,23 @@ ApproxFunBase = "fbd15aa5-315a-5a7d-a8a4-24992e37be05"
 ApproxFunFourier = "59844689-9c9d-51bf-9583-5b794ec66d30"
 ApproxFunRational = "3d0dae4a-d0ce-400f-add5-31ee3cccaa25"
 BandedMatrices = "aae01518-5342-5314-be14-df237901396f"
+FastGaussQuadrature = "442a2c76-b920-505d-bb47-c5924d526838"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
 SpecialFunctions = "276daf66-3868-5448-9aa4-cd146d93841b"
 
 [compat]
+AbstractIterativeSolvers = "0.0.1"
 ApproxFun = "0.11.8, 0.12"
 ApproxFunBase = "0.3, 0.4"
 ApproxFunFourier = "0.1, 0.2"
 ApproxFunRational = "^0.1.3"
+BandedMatrices = "0.16"
 Reexport = "0.2, 1"
 SpecialFunctions = "^1.3"
-AbstractIterativeSolvers = "0.0.1"
-BandedMatrices = "0.16"
 julia = "^1.5"
-
+FastGaussQuadrature = "0.4"
 
 [extras]
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"

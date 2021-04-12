@@ -1,9 +1,11 @@
 module AKNS
 using Base, ApproxFun, ApproxFunBase, SpecialFunctions, ApproxFunFourier, Reexport, LinearAlgebra,
-    ApproxFunRational, BandedMatrices, SparseArrays
+    ApproxFunRational, BandedMatrices, SparseArrays, FastGaussQuadrature
 #, MacroTools#, Reexport, AbstractFFTs, FFTW, InfiniteArrays, FillArrays, FastTransforms, IntervalSets,
 
-export AKNSscattering, ODEFT, AKNSscattering_rat, discreteRHP, Residue, ODEFT_Gaussian, ODEFT_solve, grideval
+export AKNSscattering, ODEFT, AKNSscattering_rat, discreteRHP, Residue, ODEFT_Gaussian, ODEFT_solve, grideval, AKNSdet
+
+include("freddet.jl")
 
 u1 = (x,w) -> w ≈ 0 ? 1im*pi + 2im*atan(x) : exp(1im*x*w)*( exp(-w + loggamma(0,1im*x*w-w)) - exp(w + loggamma(0,1im*x*w+w)) + exp(w)*( x >= 0 ? 2im*pi : 0.0))
 ϕrat = (x,w) -> (w <= 0 ? u1(x,w) : -u1(x,-w) |> conj)/(2im)
