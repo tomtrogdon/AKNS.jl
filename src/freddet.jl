@@ -19,9 +19,10 @@ function remove_deltas!(s::SumFun)
 end
 
 function AKNSdet(ρ₁,ρ₂,n,m)
-    F = FourierTransform(1.0)
+    F = FourierTransform(-1.0)
     f1 = F*Fun(ρ₁,OscLaurent(0.0),m) |> SumFun |> remove_deltas!
-    f2 = F*Fun(ρ₂,OscLaurent(0.0),m) |> SumFun |> remove_deltas!
+    Fn = FourierTransform(1.0)
+    f2 = Fn*Fun(ρ₂,OscLaurent(0.0),m) |> SumFun |> remove_deltas!
 
 
 
