@@ -1,7 +1,7 @@
 name = "AKNS"
 uuid = "75efc99c-f354-4bf0-9c4f-447e54034ed9"
 authors = ["Tom Trogdon <trogdon@uw.edu>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 AbstractIterativeSolvers = "625e1fda-64c5-4861-b688-905651d1f470"
